@@ -3,7 +3,7 @@ public class Main {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
         Date dateToEnd1 = new Date(System.currentTimeMillis() + 7200000);
         Date dateToEnd2 = new Date(System.currentTimeMillis() + 54000000);
-        Date dateToEnd3 = new Date(System.currentTimeMillis() + 96008000);
+        Date dateToEnd3 = new Date(System.currentTimeMillis() + 6008000);
 
         Task task1 = new Task("Fryzjer", "Umówić wizytę", taskCategory.NEW, dateToEnd1.toString());
         Task task2 = new Task("Zakupy", "Kupić mleko , ser , szynke", taskCategory.IN_PROGRESS, dateToEnd2.toString());

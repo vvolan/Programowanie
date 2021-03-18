@@ -1,24 +1,67 @@
-public class Main {
-    public static void main(String[] args) {
+public class Task {
+    private String taskName;
+    private String taskDescription;
+    private taskCategory taskCategory;
+    private String taskDateTimeStart;
+    private String taskDateTimeStop;
+}
+
+    public Task (String taskName, String taskDescription, taskCategory taskCategory, String taskDateTimeStop) {
+        this.taskName = taskName;
+        this.taskDescription = taskDescription;
+        this.taskCategory = taskCategory;
+        this.taskDateTimeStop = taskDateTimeStop;
+
+
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
-        Date dateToEnd1 = new Date(System.currentTimeMillis() + 7200000);
-        Date dateToEnd2 = new Date(System.currentTimeMillis() + 54000000);
-        Date dateToEnd3 = new Date(System.currentTimeMillis() + 43006000);
-        Task task1 = new Task("Fryzjer", "Umówić wizytę, taskCategory.NEW, dateToEnd1.toString());
-        Task task2 = new Task("Zakupy", "Kupić mleko , ser , szynke", taskCategory.IN_PROGRESS, dateToEnd2.toString());
-        Task task3 = new Task("Sprzątanie", "Odkurzyć mieszkanie", taskCategory.DONE, dateToEnd3.toString());
-        Date dateToEnd4 = new Date(System.currentTimeMillis() + TimeUnit.DAYS.toMillis(60));
-        Task task4 = new Task("Jazda na rowerze", "Przejechać 40km", taskCategory.NEW, dateToEnd4.toString());
+        Date date = new Date(System.currentTimeMillis());
+        taskDateTimeStart = date.toString();
+    }
 
-        List<Task> taskList = new ArrayList<Task>();
-        taskList.add(task1);
-        taskList.add(task2);
-        taskList.add(task3);
-        taskList.add(task4);
 
-        for (Task task : taskList) {
-            System.out.println(task.toString());
-        }
 
+    public String toString() {
+        return "Name: " + taskName + ", Description: " + taskDescription + ", Category: " + taskCategory.name() +
+                ", Time start: " + taskDateTimeStart + ", Time stop: " + taskDateTimeStop;
+    }
+
+    public String getTaskName() {
+        return taskName;
+    }
+
+    public String getTaskDescription() {
+        return taskDescription;
+    }
+
+    public taskCategory getTaskCategory() {
+        return taskCategory;
+    }
+
+    public String getTaskDateTimeStart() {
+        return taskDateTimeStart;
+    }
+
+    public String getTaskDateTimeStop() {
+        return taskDateTimeStop;
+    }
+
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
+    }
+
+    public void setTaskDescription(String taskDescription) {
+        this.taskDescription = taskDescription;
+    }
+
+    public void setTaskCategory(taskCategory taskCategory) {
+        this.taskCategory = taskCategory;
+    }
+
+    public void setTaskDateTimeStart(String taskDateTimeStart) {
+        this.taskDateTimeStart = taskDateTimeStart;
+    }
+
+    public void setTaskDateTimeStop(String taskDateTimeStop) {
+        this.taskDateTimeStop = taskDateTimeStop;
     }
 }
