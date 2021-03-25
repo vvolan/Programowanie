@@ -8,7 +8,7 @@ public  class  Main {
 
     public  static  void  main ( String [] args ) {
 
-        Zadanie zad1 =  nowe  Zadanie ( " Polutować " , " Napisać aplikacje " , taskCategory . IN_PROGRESS );
+        Zadanie zad1 =  nowe  Zadanie ( " Polutowac " , " Napisać aplikacje " , taskCategory . IN_PROGRESS );
 
         Podzadanie zad2 = ( Podzadanie ) nowe  Zadanie ( " Sprawozdanie " , " Pojechac do sklepu " , taskCategory . DONE );
 
